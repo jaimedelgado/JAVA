@@ -1,0 +1,1 @@
+SET PATH=c:\JDK\jdk1.7.0-64bits\bin;.; %PATH %
