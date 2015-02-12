@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Propiedad SYSTEM 'visitaExtendida.dtd'> 
+<visita id="visita1">
+  <expresionIni>
+	<seq numExps="2">
+		             <fun nombre="factorial" numParams="1">
+		             	<param>n</param>
+		             	<cuerpo>
+			                <ifthenelse>
+			                	<if>
+			                       <var nombre="n"/>
+			                    </if>
+			                    <then>
+			                    	<mul>
+			                      	 	<var nombre="n"/>
+			                      	 	<call nombre="factorial" numArgs="1">
+			                      	 		<resta>
+			                      	 			<var nombre="n"/>
+			                      	 			<num valor="1"/>
+			                      	 		</resta>
+			                      	 	</call>
+			                      	</mul>
+			                	</then>
+			                	<else>
+			                		<num valor="1"/>
+			                	</else>
+			               </ifthenelse>
+			           </cuerpo>
+			       </fun>
+			       <write>
+			     		<call nombre="factorial" numArgs="1">
+			     			<num valor="5"/>
+			     		</call>
+			       </write>
+			    </seq>
+		</expresionIni>
+	<etapa id="WalleNorte" recurso="RWalleNorte" html="index.html">
+		<continuacion descripcion="NORTE" etapaSiguiente="WalleNorte">
+			<precondicion>
+				<seq numExps="2">
+		             <fun nombre="factorial" numParams="1">
+		             	<param>n</param>
+		             	<cuerpo>
+			                <ifthenelse>
+			                	<if>
+			                       <var nombre="n"/>
+			                    </if>
+			                    <then>
+			                    	<mul>
+			                      	 	<var nombre="n"/>
+			                      	 	<call nombre="factorial" numArgs="1">
+			                      	 		<resta>
+			                      	 			<var nombre="n"/>
+			                      	 			<num valor="1"/>
+			                      	 		</resta>
+			                      	 	</call>
+			                      	</mul>
+			                	</then>
+			                	<else>
+			                		<num valor="1"/>
+			                	</else>
+			               </ifthenelse>
+			           </cuerpo>
+			       </fun>
+			       <write>
+			     		<call nombre="factorial" numArgs="1">
+			     			<num valor="5"/>
+			     		</call>
+			       </write>
+			    </seq>
+			</precondicion>
+			<accion>
+				<seq numExps="2">
+		             <fun nombre="cuentaAtras" numParams="1">
+		             	<param>num</param>
+		             	<cuerpo>
+			                <seq numExps="1">
+			                       <while>
+			                       		<condicion>
+			                       			<distinto>
+			                       				<var nombre="num"/>
+			                       				<num valor="0"/>
+			                       			</distinto>
+			                       		</condicion>
+			                       		<cuerpo>
+			                       			<seq numExps="2">
+			                       				<write>
+			                       					<var nombre="num"/>
+			                       				</write>
+			                       				<asig variable="num">
+			                       					<resta>
+			                       						<var nombre="num"/>
+			                       						<num valor="1"/>
+			                       					</resta>
+			                       				</asig>
+			                       			</seq>
+			                       		</cuerpo>
+			                       	</while>
+			                  </seq>
+			              </cuerpo>
+			          </fun>
+			          <call nombre="cuentaAtras" numArgs="1">
+			          		<num valor="6"/>
+			          </call>
+			     </seq>
+			  </accion>
+		</continuacion>
+		<continuacion descripcion="SUR" etapaSiguiente="WalleSur"/>
+		<continuacion descripcion="ESTE" etapaSiguiente="WalleEste"/>
+		<continuacion descripcion="OESTE" etapaSiguiente="WalleOeste"/>
+	</etapa>
+	<etapa id="WalleSur" recurso="RWalleSur" html="EtapaWalleSur.html">
+		<continuacion descripcion="NORTE" etapaSiguiente="WalleNorte"/>
+		<continuacion descripcion="SUR" etapaSiguiente="WalleSur"/>
+		<continuacion descripcion="ESTE" etapaSiguiente="WalleEste"/>
+		<continuacion descripcion="OESTE" etapaSiguiente="WalleOeste"/>
+	</etapa>
+	<etapa id="WalleEste" recurso="RWalleEste" html="EtapaWalleEste.html">
+		<continuacion descripcion="NORTE" etapaSiguiente="WalleNorte"/>
+		<continuacion descripcion="SUR" etapaSiguiente="WalleSur"/>
+		<continuacion descripcion="ESTE" etapaSiguiente="WalleEste"/>
+		<continuacion descripcion="OESTE" etapaSiguiente="WalleOeste"/>
+	</etapa>
+	<etapa id="WalleOeste" recurso="RWalleOeste" html="EtapaWalleOeste.html">
+		<continuacion descripcion="NORTE" etapaSiguiente="WalleNorte"/>
+		<continuacion descripcion="SUR" etapaSiguiente="WalleSur"/>
+		<continuacion descripcion="ESTE" etapaSiguiente="WalleEste"/>
+		<continuacion descripcion="OESTE" etapaSiguiente="WalleOeste"/>
+	</etapa>
+	<recurso id="RWalleNorte" descripcion="Walle-Norte" imagen="walleNorth.png" html="RWalleNorte.html"/>
+	<recurso id="RWalleSur" descripcion="Walle-Sur" imagen="walleSouth.png" html="RWalleSur.html"/>
+	<recurso id="RWalleEste" descripcion="Walle-Este" imagen="walleEast.png" html="RWalleEste.html" />
+	<recurso id="RWalleOeste" descripcion="Walle-Oeste" imagen="walleWest.png" html="RWalleOeste.html"/>
+</visita>
+

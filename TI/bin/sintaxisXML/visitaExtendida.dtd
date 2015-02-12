@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!ELEMENT visita (expresionIni?, etapa*, recurso*)> 
+<!ATTLIST visita
+	id ID #REQUIRED
+>
+<!ELEMENT expresionIni (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>	
+<!ELEMENT etapa (continuacion*|(asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)?)>
+<!ATTLIST etapa
+	id ID #REQUIRED
+	recurso IDREF #REQUIRED
+	html CDATA #REQUIRED
+>
+
+<!ELEMENT continuacion (precondicion, accion)?>
+<!ATTLIST continuacion
+	descripcion CDATA #REQUIRED
+	etapaSiguiente IDREF #REQUIRED
+>
+<!ELEMENT recurso EMPTY>
+<!ATTLIST recurso
+	id ID #REQUIRED
+	imagen CDATA #REQUIRED
+	descripcion CDATA #REQUIRED
+	html CDATA #REQUIRED
+>
+<!ELEMENT precondicion	(asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>				
+<!ELEMENT accion (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>
+<!ELEMENT asig (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>
+<!ATTLIST asig
+	variable CDATA #REQUIRED>
+<!ELEMENT call ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)+)>
+<!ATTLIST call
+	nombre CDATA #REQUIRED
+	numArgs CDATA #REQUIRED>
+<!ELEMENT distinto ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT div ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT igual ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT mayoroigual ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT menor ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT menoroigual ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT mod ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT mul ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT or ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT resta ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT suma ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write), (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))>
+<!ELEMENT fun ((param)*,cuerpo)>
+<!ATTLIST fun
+	nombre CDATA #REQUIRED
+	numParams CDATA #REQUIRED>
+<!ELEMENT param (#PCDATA)>
+<!ELEMENT cuerpo (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>
+<!ELEMENT ifthenelse (if, then, else)>
+<!ELEMENT if (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>
+<!ELEMENT then (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>
+<!ELEMENT else (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>
+<!ELEMENT not (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>
+<!ELEMENT num EMPTY>
+<!ATTLIST num
+	valor CDATA #REQUIRED>
+<!ELEMENT seq ((asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write))*>
+<!ATTLIST seq
+	numExps CDATA #REQUIRED>
+<!ELEMENT var EMPTY>
+<!ATTLIST var
+	nombre CDATA #REQUIRED>
+<!ELEMENT while (condicion, cuerpo)>
+<!ELEMENT condicion (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>
+<!ELEMENT write (asig|call|distinto|div|igual|mayoroigual|menor|menoroigual|mod|mul|or|resta|suma|fun|ifthenelse|not|num|seq|var|while|write)>
