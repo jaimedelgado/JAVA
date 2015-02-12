@@ -1,0 +1,12 @@
+usuario
+Pepe
+passwordPepe
+archivos
+a1.txt
+a2.txt
+finusuario
+usuario
+Jaime
+passwordJaime
+archivos
+finusuario
