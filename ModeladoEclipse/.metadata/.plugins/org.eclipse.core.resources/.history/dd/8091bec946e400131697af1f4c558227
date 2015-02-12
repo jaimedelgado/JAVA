@@ -1,0 +1,14 @@
+	package visitas.diagram.part;
+
+	/**
+ * @generated
+ */
+public class VisitasNodeDescriptor extends org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor {
+		/**
+ * @generated
+ */
+public VisitasNodeDescriptor(org.eclipse.emf.ecore.EObject modelElement, int visualID) {
+	super(modelElement, visualID);
+}
+
+	}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Visitas/src" modelPluginID="Visitas" modelName="Visitas"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" language="" operationReflection="true"
+    runtimePlatform="RCP" importOrganizing="true">
+  <foreignModel>visitas.ecore</foreignModel>
+  <genPackages prefix="Visitas" disposableProviderFactory="true" ecorePackage="visitas.ecore#/">
+    <genClasses ecoreClass="visitas.ecore#//Etapa">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visitas.ecore#//Etapa/htmlEtapa"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visitas.ecore#//Etapa/recursoEtapa"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visitas.ecore#//Etapa/continuacionEtapa"/>
+    </genClasses>
+    <genClasses ecoreClass="visitas.ecore#//Recurso">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visitas.ecore#//Recurso/htmlRecurso"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visitas.ecore#//Recurso/imagenRecurso"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visitas.ecore#//Recurso/descripcionRecurso"/>
+    </genClasses>
+    <genClasses ecoreClass="visitas.ecore#//Continuacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visitas.ecore#//Continuacion/textoContinuacion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visitas.ecore#//Continuacion/etapaContinuacion"/>
+    </genClasses>
+    <genClasses ecoreClass="visitas.ecore#//Visita">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visitas.ecore#//Visita/etapasVisita"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visitas.ecore#//Visita/continuacionesVisita"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visitas.ecore#//Visita/recursosVisita"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

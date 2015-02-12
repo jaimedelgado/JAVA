@@ -1,0 +1,15 @@
+package visitas.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class VisitasBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}

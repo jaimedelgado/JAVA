@@ -1,0 +1,313 @@
+	package visitas.diagram.part;
+
+	/**
+ * @generated
+ */
+public class VisitasDiagramUpdater {
+		
+		/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (visitas.diagram.part.VisitasVisualIDRegistry.getVisualID(view)) {
+		case visitas.diagram.edit.parts.VisitaEditPart.VISUAL_ID:
+	return getVisita_1000SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasNodeDescriptor> getVisita_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+visitas.Visita modelElement = (visitas.Visita) view.getElement();
+	java.util.LinkedList<visitas.diagram.part.VisitasNodeDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getContinuacionesVisita().iterator(); it.hasNext();) {
+		visitas.Continuacion childElement = (visitas.Continuacion) it.next();
+					int visualID = visitas.diagram.part.VisitasVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == visitas.diagram.edit.parts.ContinuacionEditPart.VISUAL_ID) {
+	result.add(new visitas.diagram.part.VisitasNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						for (java.util.Iterator<?> it = modelElement.getEtapasVisita().iterator(); it.hasNext();) {
+		visitas.Etapa childElement = (visitas.Etapa) it.next();
+					int visualID = visitas.diagram.part.VisitasVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == visitas.diagram.edit.parts.EtapaEditPart.VISUAL_ID) {
+	result.add(new visitas.diagram.part.VisitasNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						{ visitas.Recurso childElement = modelElement.getRecursosVisita();
+					int visualID = visitas.diagram.part.VisitasVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == visitas.diagram.edit.parts.RecursoEditPart.VISUAL_ID) {
+	result.add(new visitas.diagram.part.VisitasNodeDescriptor(childElement, visualID));
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (visitas.diagram.part.VisitasVisualIDRegistry.getVisualID(view)) {
+		case visitas.diagram.edit.parts.VisitaEditPart.VISUAL_ID:
+	return getVisita_1000ContainedLinks(view);
+case visitas.diagram.edit.parts.ContinuacionEditPart.VISUAL_ID:
+	return getContinuacion_2001ContainedLinks(view);
+case visitas.diagram.edit.parts.EtapaEditPart.VISUAL_ID:
+	return getEtapa_2002ContainedLinks(view);
+case visitas.diagram.edit.parts.RecursoEditPart.VISUAL_ID:
+	return getRecurso_2003ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (visitas.diagram.part.VisitasVisualIDRegistry.getVisualID(view)) {
+		case visitas.diagram.edit.parts.ContinuacionEditPart.VISUAL_ID:
+	return getContinuacion_2001IncomingLinks(view);
+case visitas.diagram.edit.parts.EtapaEditPart.VISUAL_ID:
+	return getEtapa_2002IncomingLinks(view);
+case visitas.diagram.edit.parts.RecursoEditPart.VISUAL_ID:
+	return getRecurso_2003IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (visitas.diagram.part.VisitasVisualIDRegistry.getVisualID(view)) {
+		case visitas.diagram.edit.parts.ContinuacionEditPart.VISUAL_ID:
+	return getContinuacion_2001OutgoingLinks(view);
+case visitas.diagram.edit.parts.EtapaEditPart.VISUAL_ID:
+	return getEtapa_2002OutgoingLinks(view);
+case visitas.diagram.edit.parts.RecursoEditPart.VISUAL_ID:
+	return getRecurso_2003OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getVisita_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getContinuacion_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	visitas.Continuacion modelElement = (visitas.Continuacion) view.getElement();
+		java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Continuacion_EtapaContinuacion_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getEtapa_2002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	visitas.Etapa modelElement = (visitas.Etapa) view.getElement();
+		java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Etapa_RecursoEtapa_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Etapa_ContinuacionesEtapa_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getRecurso_2003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getContinuacion_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	visitas.Continuacion modelElement = (visitas.Continuacion) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Etapa_ContinuacionesEtapa_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getEtapa_2002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	visitas.Etapa modelElement = (visitas.Etapa) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Continuacion_EtapaContinuacion_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getRecurso_2003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	visitas.Recurso modelElement = (visitas.Recurso) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Etapa_RecursoEtapa_4002(modelElement, crossReferences));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getContinuacion_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	visitas.Continuacion modelElement = (visitas.Continuacion) view.getElement();
+		java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Continuacion_EtapaContinuacion_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getEtapa_2002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	visitas.Etapa modelElement = (visitas.Etapa) view.getElement();
+		java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Etapa_RecursoEtapa_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Etapa_ContinuacionesEtapa_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getRecurso_2003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+private static java.util.Collection<visitas.diagram.part.VisitasLinkDescriptor> getIncomingFeatureModelFacetLinks_Continuacion_EtapaContinuacion_4001(visitas.Etapa target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == visitas.VisitasPackage.eINSTANCE.getContinuacion_EtapaContinuacion()) {
+	result.add(new visitas.diagram.part.VisitasLinkDescriptor(setting.getEObject(), target, visitas.diagram.providers.VisitasElementTypes.ContinuacionEtapaContinuacion_4001, visitas.diagram.edit.parts.ContinuacionEtapaContinuacionEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<visitas.diagram.part.VisitasLinkDescriptor> getIncomingFeatureModelFacetLinks_Etapa_RecursoEtapa_4002(visitas.Recurso target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == visitas.VisitasPackage.eINSTANCE.getEtapa_RecursoEtapa()) {
+	result.add(new visitas.diagram.part.VisitasLinkDescriptor(setting.getEObject(), target, visitas.diagram.providers.VisitasElementTypes.EtapaRecursoEtapa_4002, visitas.diagram.edit.parts.EtapaRecursoEtapaEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<visitas.diagram.part.VisitasLinkDescriptor> getIncomingFeatureModelFacetLinks_Etapa_ContinuacionesEtapa_4003(visitas.Continuacion target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == visitas.VisitasPackage.eINSTANCE.getEtapa_ContinuacionesEtapa()) {
+	result.add(new visitas.diagram.part.VisitasLinkDescriptor(setting.getEObject(), target, visitas.diagram.providers.VisitasElementTypes.EtapaContinuacionesEtapa_4003, visitas.diagram.edit.parts.EtapaContinuacionesEtapaEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+		
+	/**
+ * @generated
+ */
+private static java.util.Collection<visitas.diagram.part.VisitasLinkDescriptor> getOutgoingFeatureModelFacetLinks_Continuacion_EtapaContinuacion_4001(visitas.Continuacion source) {
+	java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		visitas.Etapa destination = source.getEtapaContinuacion();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new visitas.diagram.part.VisitasLinkDescriptor(source, destination, visitas.diagram.providers.VisitasElementTypes.ContinuacionEtapaContinuacion_4001, visitas.diagram.edit.parts.ContinuacionEtapaContinuacionEditPart.VISUAL_ID));
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<visitas.diagram.part.VisitasLinkDescriptor> getOutgoingFeatureModelFacetLinks_Etapa_RecursoEtapa_4002(visitas.Etapa source) {
+	java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		visitas.Recurso destination = source.getRecursoEtapa();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new visitas.diagram.part.VisitasLinkDescriptor(source, destination, visitas.diagram.providers.VisitasElementTypes.EtapaRecursoEtapa_4002, visitas.diagram.edit.parts.EtapaRecursoEtapaEditPart.VISUAL_ID));
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<visitas.diagram.part.VisitasLinkDescriptor> getOutgoingFeatureModelFacetLinks_Etapa_ContinuacionesEtapa_4003(visitas.Etapa source) {
+	java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor> result = new java.util.LinkedList<visitas.diagram.part.VisitasLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getContinuacionesEtapa().iterator(); destinations.hasNext();) {
+		visitas.Continuacion destination = (visitas.Continuacion) destinations.next();
+		result.add(new visitas.diagram.part.VisitasLinkDescriptor(source, destination, visitas.diagram.providers.VisitasElementTypes.EtapaContinuacionesEtapa_4003, visitas.diagram.edit.parts.EtapaContinuacionesEtapaEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		
+		public java.util.List<visitas.diagram.part.VisitasNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return VisitasDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		
+		public java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return VisitasDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		
+		public java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return VisitasDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		
+		public java.util.List<visitas.diagram.part.VisitasLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return VisitasDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

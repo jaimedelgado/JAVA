@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="visitas.impl.RecursoImpl"/>
+<fullyQualifiedTypeName name="cargaEcore.CargaEcore"/>
+<fullyQualifiedTypeName name="visitas.VisitasPackage"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.common.util.EList"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="visitas.Recurso"/>
+<fullyQualifiedTypeName name="visitas.Etapa"/>
+<fullyQualifiedTypeName name="visitas.Continuacion"/>
+<fullyQualifiedTypeName name="cargaEcore.EcoreLoader"/>
+<fullyQualifiedTypeName name="visitas.Visita"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="com.sun.java.util.jar.pack.ConstantPool.Entry"/>
+<fullyQualifiedTypeName name="traductor.Traductor"/>
+<fullyQualifiedTypeName name="modelo.Recurso"/>
+<fullyQualifiedTypeName name="modelo.Etapa"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+</qualifiedTypeNameHistroy>

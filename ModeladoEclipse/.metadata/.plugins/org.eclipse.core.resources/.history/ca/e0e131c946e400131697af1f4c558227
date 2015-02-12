@@ -1,0 +1,32 @@
+package visitas.diagram.part;
+
+/**
+ * @generated
+ */
+public class VisitasDiagramActionBarContributor extends org.eclipse.gmf.runtime.diagram.ui.parts.DiagramActionBarContributor {
+
+	/**
+ * @generated
+ */
+	protected Class getEditorClass() {
+		return visitas.diagram.part.VisitasDiagramEditor.class;
+	}
+
+	/**
+ * @generated
+ */
+	protected String getEditorId() {
+		return visitas.diagram.part.VisitasDiagramEditor.ID;
+	}
+	
+	/**
+ * @generated
+ */
+	public void init(org.eclipse.ui.IActionBars bars, org.eclipse.ui.IWorkbenchPage page) {
+		super.init(bars, page);
+		// print preview
+		org.eclipse.jface.action.IMenuManager fileMenu = bars.getMenuManager().findMenuUsingPath(org.eclipse.ui.IWorkbenchActionConstants.M_FILE);
+		assert fileMenu != null;
+		fileMenu.remove("pageSetupAction"); //$NON-NLS-1$
+	}
+	}

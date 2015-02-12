@@ -1,0 +1,152 @@
+package visitas.diagram.part;
+
+/**
+ * @generated
+ */
+public class VisitasNewDiagramFileWizard extends org.eclipse.jface.wizard.Wizard {
+
+	/**
+ * @generated
+ */
+	private 
+visitas.diagram.application.WizardNewFileCreationPage myFileCreationPage;
+
+	/**
+ * @generated
+ */
+	private visitas.diagram.part.ModelElementSelectionPage diagramRootElementSelectionPage;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.emf.transaction.TransactionalEditingDomain myEditingDomain;
+
+	/**
+ * @generated
+ */
+	public VisitasNewDiagramFileWizard(org.eclipse.emf.common.util.URI domainModelURI,
+			org.eclipse.emf.ecore.EObject diagramRoot,
+			org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain) {
+		assert domainModelURI != null : "Domain model uri must be specified"; //$NON-NLS-1$
+	    assert diagramRoot != null : "Doagram root element must be specified"; //$NON-NLS-1$
+	    assert editingDomain != null : "Editing domain must be specified"; //$NON-NLS-1$
+
+		myFileCreationPage = new 
+visitas.diagram.application.WizardNewFileCreationPage(visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_CreationPageName, org.eclipse.jface.viewers.StructuredSelection.EMPTY);
+		myFileCreationPage.setTitle(visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_CreationPageTitle);
+		myFileCreationPage.setDescription(org.eclipse.osgi.util.NLS.bind(
+				visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_CreationPageDescription, 
+				visitas.diagram.edit.parts.VisitaEditPart.MODEL_ID));
+		org.eclipse.core.runtime.IPath filePath;
+		String fileName = org.eclipse.emf.common.util.URI.decode(domainModelURI.trimFileExtension().lastSegment());
+		if (domainModelURI.isPlatformResource()) {
+			filePath = new org.eclipse.core.runtime.Path(domainModelURI.trimSegments(1).toPlatformString(true));
+		} else if (domainModelURI.isFile()) {
+			filePath = new org.eclipse.core.runtime.Path(domainModelURI.trimSegments(1).toFileString());
+		} else {
+			// TODO : use some default path
+			throw new IllegalArgumentException("Unsupported URI: " + domainModelURI);  //$NON-NLS-1$
+		}
+		myFileCreationPage.setContainerFullPath(filePath);
+		myFileCreationPage.setFileName(visitas.diagram.part.VisitasDiagramEditorUtil.getUniqueFileName(
+				filePath, fileName, "visitas_diagram"));  //$NON-NLS-1$
+
+		diagramRootElementSelectionPage = new DiagramRootElementSelectionPage(visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_RootSelectionPageName);
+		diagramRootElementSelectionPage.setTitle(visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_RootSelectionPageTitle);
+		diagramRootElementSelectionPage.setDescription(visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_RootSelectionPageDescription);
+		diagramRootElementSelectionPage.setModelElement(diagramRoot);
+
+	   	myEditingDomain = editingDomain;
+	}
+
+	/**
+ * @generated
+ */
+	public void addPages() {
+		addPage(myFileCreationPage);
+		addPage(diagramRootElementSelectionPage);
+	}
+
+	/**
+ * @generated
+ */
+	public boolean performFinish() {
+		java.util.LinkedList<org.eclipse.core.resources.IFile> affectedFiles = new java.util.LinkedList<org.eclipse.core.resources.IFile>();
+				org.eclipse.core.runtime.IPath diagramModelPath = myFileCreationPage.getContainerFullPath().append(myFileCreationPage.getFileName());
+		org.eclipse.emf.common.util.URI diagramModelURI = org.eclipse.emf.common.util.URI.createFileURI(diagramModelPath.toString());
+				org.eclipse.emf.ecore.resource.ResourceSet resourceSet = myEditingDomain.getResourceSet();
+		final org.eclipse.emf.ecore.resource.Resource diagramResource = resourceSet.createResource(diagramModelURI);
+		org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand command =
+			new org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand(
+				myEditingDomain, visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_InitDiagramCommand, affectedFiles) {
+
+			protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+					org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+						throws org.eclipse.core.commands.ExecutionException {
+				int diagramVID = visitas.diagram.part.VisitasVisualIDRegistry.getDiagramVisualID(diagramRootElementSelectionPage.getModelElement());
+				if (diagramVID != visitas.diagram.edit.parts.VisitaEditPart.VISUAL_ID) {
+					return org.eclipse.gmf.runtime.common.core.command.CommandResult.newErrorCommandResult(
+						visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_IncorrectRootError);
+				}
+				org.eclipse.gmf.runtime.notation.Diagram diagram =
+					org.eclipse.gmf.runtime.diagram.core.services.ViewService.createDiagram(
+						diagramRootElementSelectionPage.getModelElement(), visitas.diagram.edit.parts.VisitaEditPart.MODEL_ID,
+						visitas.diagram.part.VisitasDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
+				diagramResource.getContents().add(diagram);
+												return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult();
+			}
+		};
+		try {
+			org.eclipse.core.commands.operations.OperationHistoryFactory.getOperationHistory().execute(
+				command, new org.eclipse.core.runtime.NullProgressMonitor(), null);
+			diagramResource.save(visitas.diagram.part.VisitasDiagramEditorUtil.getSaveOptions());
+			visitas.diagram.part.VisitasDiagramEditorUtil.openDiagram(diagramResource);
+		} catch (org.eclipse.core.commands.ExecutionException e) {
+			visitas.diagram.part.VisitasDiagramEditorPlugin.getInstance().logError(
+				"Unable to create model and diagram", e);  //$NON-NLS-1$
+		} catch (java.io.IOException ex) {
+			visitas.diagram.part.VisitasDiagramEditorPlugin.getInstance().logError(
+				"Save operation failed for: " + diagramModelURI, ex);  //$NON-NLS-1$
+		} catch (org.eclipse.ui.PartInitException ex) {
+			visitas.diagram.part.VisitasDiagramEditorPlugin.getInstance().logError(
+				"Unable to open editor", ex);  //$NON-NLS-1$
+		}			
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	private static class DiagramRootElementSelectionPage extends visitas.diagram.part.ModelElementSelectionPage {
+
+		/**
+ * @generated
+ */
+		protected DiagramRootElementSelectionPage(String pageName) {
+			super(pageName);
+		}
+
+		/**
+ * @generated
+ */
+		protected String getSelectionTitle() {
+			return visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_RootSelectionPageSelectionTitle;
+		}
+
+		/**
+ * @generated
+ */
+		protected boolean validatePage() {
+			if (getModelElement() == null) {
+				setErrorMessage(visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_RootSelectionPageNoSelectionMessage);
+				return false;
+			}
+			boolean result = org.eclipse.gmf.runtime.diagram.core.services.ViewService.getInstance().provides(
+				new org.eclipse.gmf.runtime.diagram.core.services.view.CreateDiagramViewOperation(
+					new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(getModelElement()),
+					visitas.diagram.edit.parts.VisitaEditPart.MODEL_ID, visitas.diagram.part.VisitasDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT));
+			setErrorMessage(result ? null : visitas.diagram.part.Messages.VisitasNewDiagramFileWizard_RootSelectionPageInvalidSelectionMessage);
+			return result;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/Visitas/model/visitas.genmodel
+gmf_dashboard/domainModel=platform\:/resource/Visitas/model/visitas.ecore
+gmf_dashboard/generationModel=platform\:/resource/Visitas/model/Theirs.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/Visitas/model/My.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/Visitas/model/Theirs.gmfmap
+gmf_dashboard/option_rcp=*
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/Visitas/model/My.gmftool

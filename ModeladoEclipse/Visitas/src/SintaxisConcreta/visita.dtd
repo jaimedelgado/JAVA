@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT visita (etapa*, recurso*)> 
+<!ATTLIST visita
+	id ID #REQUIRED
+>
+	
+<!ELEMENT etapa (continuacion*)>
+<!ATTLIST etapa
+	id ID #REQUIRED
+	recurso IDREF #REQUIRED
+	html CDATA #REQUIRED
+>
+<!ELEMENT continuacion EMPTY>
+<!ATTLIST continuacion
+	descripcion CDATA #REQUIRED
+	etapaSiguiente IDREF #REQUIRED
+>
+<!ELEMENT recurso EMPTY>
+<!ATTLIST recurso
+	id ID #REQUIRED
+	imagen CDATA #REQUIRED
+	descripcion CDATA #REQUIRED
+	html CDATA #REQUIRED
+>
+
+
+

@@ -1,0 +1,18 @@
+package visitas.diagram.providers;
+
+/**
+ * @generated
+ */
+public class VisitasEditPartProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider {
+
+	
+	/**
+ * @generated
+ */
+	public VisitasEditPartProvider() {
+		super(new visitas.diagram.edit.parts.VisitasEditPartFactory(), 			visitas.diagram.part.VisitasVisualIDRegistry.TYPED_INSTANCE, 			visitas.diagram.edit.parts.VisitaEditPart.MODEL_ID			
+		);
+	}
+
+
+	}

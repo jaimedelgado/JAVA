@@ -1,0 +1,86 @@
+package visitas.diagram.providers;
+
+/**
+ * @generated
+ */
+public class VisitasModelingAssistantProvider extends org.eclipse.gmf.runtime.emf.ui.services.modelingassistant.ModelingAssistantProvider {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.emf.ecore.EObject selectExistingElementForSource(
+			org.eclipse.core.runtime.IAdaptable target,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		return selectExistingElement(target, getTypesForSource(target, relationshipType));
+	}
+
+		/**
+ * @generated
+ */
+	public org.eclipse.emf.ecore.EObject selectExistingElementForTarget(
+			org.eclipse.core.runtime.IAdaptable source,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		return selectExistingElement(source, getTypesForTarget(source, relationshipType));
+	}
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.emf.ecore.EObject selectExistingElement(
+			org.eclipse.core.runtime.IAdaptable host, java.util.Collection types) {
+		if (types.isEmpty()) {
+			return null;
+		}
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart editPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) host.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		if (editPart == null) {
+			return null;
+		}
+		org.eclipse.gmf.runtime.notation.Diagram diagram =
+				(org.eclipse.gmf.runtime.notation.Diagram) editPart.getRoot().getContents().getModel();
+		java.util.HashSet/*[org.eclipse.emf.ecore.EObject]*/ elements = new java.util.HashSet/*[org.eclipse.emf.ecore.EObject]*/();
+		for (java.util.Iterator/*[org.eclipse.emf.ecore.EObject]*/ it = diagram.getElement().eAllContents(); it.hasNext();) {
+	org.eclipse.emf.ecore.EObject element = (org.eclipse.emf.ecore.EObject) it.next();
+			if (isApplicableElement(element, types)) {
+				elements.add(element);
+			}
+		}
+		if (elements.isEmpty()) {
+			return null;
+		}
+		return selectElement((org.eclipse.emf.ecore.EObject[]) elements.toArray(
+				new org.eclipse.emf.ecore.EObject[elements.size()]));
+	}
+
+		/**
+ * @generated
+ */
+	protected boolean isApplicableElement(org.eclipse.emf.ecore.EObject element, java.util.Collection types) {
+		org.eclipse.gmf.runtime.emf.type.core.IElementType type =
+				org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry.getInstance().getElementType(element);
+		return types.contains(type);
+	}
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.emf.ecore.EObject selectElement(org.eclipse.emf.ecore.EObject[] elements) {
+		org.eclipse.swt.widgets.Shell shell = org.eclipse.swt.widgets.Display.getCurrent().getActiveShell();
+		org.eclipse.jface.viewers.ILabelProvider labelProvider =
+			new org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider(
+				visitas.diagram.part.VisitasDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
+		org.eclipse.ui.dialogs.ElementListSelectionDialog dialog =
+				new org.eclipse.ui.dialogs.ElementListSelectionDialog(shell, labelProvider);
+		dialog.setMessage(visitas.diagram.part.Messages.VisitasModelingAssistantProviderMessage);
+		dialog.setTitle(visitas.diagram.part.Messages.VisitasModelingAssistantProviderTitle);
+		dialog.setMultipleSelection(false);
+		dialog.setElements(elements);
+		org.eclipse.emf.ecore.EObject selected = null;
+		if (dialog.open() == org.eclipse.jface.window.Window.OK) {
+			selected = (org.eclipse.emf.ecore.EObject) dialog.getFirstResult();
+		}
+		return selected;
+	}
+	
+	}

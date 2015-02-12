@@ -1,0 +1,27 @@
+package visitas.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		visitas.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+visitas.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+visitas.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+visitas.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+visitas.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return visitas.diagram.part.VisitasDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

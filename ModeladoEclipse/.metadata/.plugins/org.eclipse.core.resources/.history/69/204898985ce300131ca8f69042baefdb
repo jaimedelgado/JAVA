@@ -1,0 +1,21 @@
+	package visitas.diagram.part;
+
+	/**
+ * @generated
+ */
+public class VisitasLinkDescriptor extends org.eclipse.gmf.tooling.runtime.update.UpdaterLinkDescriptor {
+		/**
+ * @generated
+ */
+public VisitasLinkDescriptor(org.eclipse.emf.ecore.EObject source, org.eclipse.emf.ecore.EObject destination, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType, int linkVID) {
+	super(source, destination, elementType, linkVID);
+}
+	
+		/**
+ * @generated
+ */
+public VisitasLinkDescriptor(org.eclipse.emf.ecore.EObject source, org.eclipse.emf.ecore.EObject destination, org.eclipse.emf.ecore.EObject linkElement, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType, int linkVID) {
+	super(source, destination, linkElement, elementType, linkVID);
+}
+	
+	}

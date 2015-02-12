@@ -1,0 +1,22 @@
+	package visitas.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class EtapaRecursoEtapaItemSemanticEditPolicy extends visitas.diagram.edit.policies.VisitasBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public EtapaRecursoEtapaItemSemanticEditPolicy() {
+				super(visitas.diagram.providers.VisitasElementTypes.EtapaRecursoEtapa_4003);
+	}
+
+			/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getDestroyReferenceCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest req) {
+		return getGEFWrapper(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(req));
+	}
+		
+	}

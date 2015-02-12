@@ -1,0 +1,54 @@
+	package visitas.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class VisitaItemSemanticEditPolicy extends visitas.diagram.edit.policies.VisitasBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public VisitaItemSemanticEditPolicy() {
+				super(visitas.diagram.providers.VisitasElementTypes.Visita_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (visitas.diagram.providers.VisitasElementTypes.Continuacion_2001 == req.getElementType()) {
+	return getGEFWrapper(new visitas.diagram.edit.commands.ContinuacionCreateCommand(req));
+}
+		if (visitas.diagram.providers.VisitasElementTypes.Etapa_2002 == req.getElementType()) {
+	return getGEFWrapper(new visitas.diagram.edit.commands.EtapaCreateCommand(req));
+}
+		if (visitas.diagram.providers.VisitasElementTypes.Recurso_2003 == req.getElementType()) {
+	return getGEFWrapper(new visitas.diagram.edit.commands.RecursoCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}

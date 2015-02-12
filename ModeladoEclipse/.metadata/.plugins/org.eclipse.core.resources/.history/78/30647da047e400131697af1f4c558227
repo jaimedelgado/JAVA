@@ -1,0 +1,15 @@
+package visitas.diagram.providers;
+
+/**
+ * @generated
+ */
+public class VisitasIconProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider implements org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider {
+
+		/**
+ * @generated
+ */
+	public VisitasIconProvider() {
+		super(visitas.diagram.providers.VisitasElementTypes.TYPED_INSTANCE);
+	}
+
+	}

@@ -1,0 +1,22 @@
+package visitas.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class VisitasModelingAssistantProviderOfVisitaEditPart extends visitas.diagram.providers.VisitasModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+					types.add(visitas.diagram.providers.VisitasElementTypes.Continuacion_2001);
+					types.add(visitas.diagram.providers.VisitasElementTypes.Etapa_2002);
+					types.add(visitas.diagram.providers.VisitasElementTypes.Recurso_2003);
+					return types;	
+	}
+			
+	
+	}

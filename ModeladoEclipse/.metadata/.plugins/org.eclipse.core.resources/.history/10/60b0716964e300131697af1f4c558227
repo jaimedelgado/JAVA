@@ -1,0 +1,155 @@
+package visitas.diagram.providers;
+
+/**
+ * @generated
+ */
+public class VisitasParserProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider implements org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider {
+	
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser continuacionTextoContinuacion_5001Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getContinuacionTextoContinuacion_5001Parser() {
+		if (continuacionTextoContinuacion_5001Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				visitas.VisitasPackage.eINSTANCE.getContinuacion_TextoContinuacion()
+			};
+				visitas.diagram.parsers.MessageFormatParser parser = new visitas.diagram.parsers.MessageFormatParser(features);
+								continuacionTextoContinuacion_5001Parser = parser;
+		}
+		return continuacionTextoContinuacion_5001Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser etapaHtmlEtapa_5002Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getEtapaHtmlEtapa_5002Parser() {
+		if (etapaHtmlEtapa_5002Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				visitas.VisitasPackage.eINSTANCE.getEtapa_HtmlEtapa()
+			};
+				visitas.diagram.parsers.MessageFormatParser parser = new visitas.diagram.parsers.MessageFormatParser(features);
+								etapaHtmlEtapa_5002Parser = parser;
+		}
+		return etapaHtmlEtapa_5002Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser recursoHtmlRecurso_5003Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getRecursoHtmlRecurso_5003Parser() {
+		if (recursoHtmlRecurso_5003Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				visitas.VisitasPackage.eINSTANCE.getRecurso_HtmlRecurso()
+			};
+				visitas.diagram.parsers.MessageFormatParser parser = new visitas.diagram.parsers.MessageFormatParser(features);
+								recursoHtmlRecurso_5003Parser = parser;
+		}
+		return recursoHtmlRecurso_5003Parser;
+	}
+
+
+	
+	
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(int visualID) {
+		switch (visualID) {
+				case visitas.diagram.edit.parts.ContinuacionTextoContinuacionEditPart.VISUAL_ID: return getContinuacionTextoContinuacion_5001Parser();
+		case visitas.diagram.edit.parts.EtapaHtmlEtapaEditPart.VISUAL_ID: return getEtapaHtmlEtapa_5002Parser();
+		case visitas.diagram.edit.parts.RecursoHtmlRecursoEditPart.VISUAL_ID: return getRecursoHtmlRecurso_5003Parser();
+						}
+		return null;
+	}
+		/**
+ * Utility method that consults ParserService
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(org.eclipse.gmf.runtime.emf.type.core.IElementType type, org.eclipse.emf.ecore.EObject object, String parserHint) {
+		return org.eclipse.gmf.runtime.common.ui.services.parser.ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
+	}
+		/**
+ * @generated
+ */
+	public org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(
+			org.eclipse.core.runtime.IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(visitas.diagram.part.VisitasVisualIDRegistry.getVisualID(vid));
+		}
+		org.eclipse.gmf.runtime.notation.View view =
+				(org.eclipse.gmf.runtime.notation.View) hint.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+		if (view != null) {
+			return getParser(visitas.diagram.part.VisitasVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+		/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (operation instanceof org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) {
+			org.eclipse.core.runtime.IAdaptable hint =
+					((org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) operation).getHint();
+			if (visitas.diagram.providers.VisitasElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	private static class HintAdapter extends org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter {
+
+		/**
+ * @generated
+ */
+		private final org.eclipse.gmf.runtime.emf.type.core.IElementType elementType;
+
+		/**
+ * @generated
+ */
+		public HintAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType type,
+				org.eclipse.emf.ecore.EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+ * @generated
+ */
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+	}

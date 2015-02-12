@@ -1,0 +1,69 @@
+package visitas.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class VisitasEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (visitas.diagram.part.VisitasVisualIDRegistry.getVisualID(view)) {
+				
+	case visitas.diagram.edit.parts.VisitaEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.VisitaEditPart(view);
+									
+	case visitas.diagram.edit.parts.RecursoEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.RecursoEditPart(view);
+					
+	case visitas.diagram.edit.parts.RecursoHtmlRecursoEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.RecursoHtmlRecursoEditPart(view);
+									
+	case visitas.diagram.edit.parts.EtapaEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.EtapaEditPart(view);
+					
+	case visitas.diagram.edit.parts.EtapaHtmlEtapaEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.EtapaHtmlEtapaEditPart(view);
+									
+	case visitas.diagram.edit.parts.ContinuacionEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.ContinuacionEditPart(view);
+					
+	case visitas.diagram.edit.parts.ContinuacionTextoContinuacionEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.ContinuacionTextoContinuacionEditPart(view);
+																	
+	case visitas.diagram.edit.parts.ContinuacionEtapaContinuacionEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.ContinuacionEtapaContinuacionEditPart(view);
+					
+									
+	case visitas.diagram.edit.parts.EtapaContinuacionEtapaEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.EtapaContinuacionEtapaEditPart(view);
+					
+									
+	case visitas.diagram.edit.parts.EtapaRecursoEtapaEditPart.VISUAL_ID:
+		return new visitas.diagram.edit.parts.EtapaRecursoEtapaEditPart(view);
+					
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

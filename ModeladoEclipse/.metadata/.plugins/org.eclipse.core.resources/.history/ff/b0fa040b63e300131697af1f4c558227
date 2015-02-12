@@ -1,0 +1,16 @@
+package visitas.diagram.part;
+
+/**
+ * @generated
+ */
+public class DeleteElementAction extends org.eclipse.gmf.tooling.runtime.actions.DefaultDeleteElementAction {
+
+		/**
+ * @generated
+ */
+	public DeleteElementAction(org.eclipse.ui.IWorkbenchPart part) {
+		super(part);
+	}
+
+	
+	}

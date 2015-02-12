@@ -1,0 +1,112 @@
+	package visitas.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class ContinuacionItemSemanticEditPolicy extends visitas.diagram.edit.policies.VisitasBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public ContinuacionItemSemanticEditPolicy() {
+				super(visitas.diagram.providers.VisitasElementTypes.Continuacion_2002);
+	}
+
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDestroyElementCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest req) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) getHost().getModel();
+	org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand cmd = new org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand(getEditingDomain(), null);
+	cmd.setTransactionNestingEnabled(false);
+		for (java.util.Iterator/*[?]*/ it = view.getTargetEdges().iterator(); it.hasNext();) {
+		org.eclipse.gmf.runtime.notation.Edge incomingLink = (org.eclipse.gmf.runtime.notation.Edge) it.next();
+		if (visitas.diagram.part.VisitasVisualIDRegistry.getVisualID(incomingLink) == visitas.diagram.edit.parts.EtapaContinuacionesEtapaEditPart.VISUAL_ID) {
+			org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest r = new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest(incomingLink.getSource().getElement(), null, incomingLink.getTarget().getElement(), false);
+			cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(r));
+			cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), incomingLink));
+			continue;
+		}
+	}
+	for (java.util.Iterator/*[?]*/ it = view.getSourceEdges().iterator(); it.hasNext();) {
+		org.eclipse.gmf.runtime.notation.Edge outgoingLink = (org.eclipse.gmf.runtime.notation.Edge) it.next();
+		if (visitas.diagram.part.VisitasVisualIDRegistry.getVisualID(outgoingLink) == visitas.diagram.edit.parts.ContinuacionEtapaContinuacionEditPart.VISUAL_ID) {
+			org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest r = new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest(outgoingLink.getSource().getElement(), null, outgoingLink.getTarget().getElement(), false);
+			cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(r));
+			cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), outgoingLink));
+			continue;
+		}
+	}
+	org.eclipse.emf.ecore.EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
+	if (annotation == null) {
+		// there are indirectly referenced children, need extra commands: false
+		addDestroyShortcutsCommand(cmd, view);
+		// delete host element
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(req));
+	} else {
+		cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), view));
+	}
+	return getGEFWrapper(cmd.reduce());
+}
+					
+/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getCreateRelationshipCommand(
+		org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest req) {
+	org.eclipse.gef.commands.Command command = req.getTarget() == null ?
+			getStartCreateRelationshipCommand(req) : getCompleteCreateRelationshipCommand(req);
+	return command != null ? command : super.getCreateRelationshipCommand(req);
+}
+
+/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getStartCreateRelationshipCommand(
+		org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest req) {
+	if (visitas.diagram.providers.VisitasElementTypes.ContinuacionEtapaContinuacion_4001 == req.getElementType()) {
+		return getGEFWrapper(new visitas.diagram.edit.commands.ContinuacionEtapaContinuacionCreateCommand(req,
+					req.getSource(), req.getTarget()
+			));
+	}
+if (visitas.diagram.providers.VisitasElementTypes.EtapaContinuacionesEtapa_4002 == req.getElementType()) {
+		return null;
+	}
+	return null;
+}
+
+/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getCompleteCreateRelationshipCommand(
+		org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest req) {
+	if (visitas.diagram.providers.VisitasElementTypes.ContinuacionEtapaContinuacion_4001 == req.getElementType()) {
+		return null;
+	}
+if (visitas.diagram.providers.VisitasElementTypes.EtapaContinuacionesEtapa_4002 == req.getElementType()) {
+		return getGEFWrapper(new visitas.diagram.edit.commands.EtapaContinuacionesEtapaCreateCommand(req,
+					req.getSource(), req.getTarget()
+			));
+	}
+	return null;
+}
+					
+/**
+ * Returns command to reorient EReference based link. New link target or source
+ * should be the domain model element associated with this node.
+ * 
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getReorientReferenceRelationshipCommand(
+		org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest req) {
+	switch (getVisualID(req)) {
+	case visitas.diagram.edit.parts.ContinuacionEtapaContinuacionEditPart.VISUAL_ID:
+	return getGEFWrapper(new visitas.diagram.edit.commands.ContinuacionEtapaContinuacionReorientCommand(req));
+case visitas.diagram.edit.parts.EtapaContinuacionesEtapaEditPart.VISUAL_ID:
+	return getGEFWrapper(new visitas.diagram.edit.commands.EtapaContinuacionesEtapaReorientCommand(req));
+	}
+	return super.getReorientReferenceRelationshipCommand(req);
+}
+	
+	}

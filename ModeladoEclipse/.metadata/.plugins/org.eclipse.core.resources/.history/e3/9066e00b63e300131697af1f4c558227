@@ -1,0 +1,15 @@
+package visitas.diagram.part;
+
+/**
+ * @generated
+ */
+public class LoadResourceAction extends org.eclipse.gmf.tooling.runtime.actions.DefaultLoadResourceAction {
+	/**
+ * @generated
+ */
+	public Object execute(org.eclipse.core.commands.ExecutionEvent event) throws org.eclipse.core.commands.ExecutionException {
+		return super.execute(event);
+	}
+
+
+}

@@ -1,0 +1,31 @@
+package visitas.diagram.application;
+
+/**
+ * @generated
+ */
+public class DiagramEditorWorkbenchWindowAdvisor extends org.eclipse.ui.application.WorkbenchWindowAdvisor {
+
+	/**
+ * @generated
+ */
+	public DiagramEditorWorkbenchWindowAdvisor(org.eclipse.ui.application.IWorkbenchWindowConfigurer configurer) {
+		super(configurer);
+	}
+
+		/**
+ * @generated
+ */
+	public org.eclipse.ui.application.ActionBarAdvisor createActionBarAdvisor(org.eclipse.ui.application.IActionBarConfigurer configurer) {
+		return new visitas.diagram.application.DiagramEditorActionBarAdvisor(configurer);
+	}
+
+		/**
+ * @generated
+ */
+	public void preWindowOpen() {
+		org.eclipse.ui.application.IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
+		configurer.setInitialSize(new org.eclipse.swt.graphics.Point(1000, 700));
+		configurer.setTitle(visitas.diagram.part.Messages.DiagramEditorWorkbenchWindowAdvisor_Title);
+	}
+
+	}

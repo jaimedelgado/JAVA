@@ -1,0 +1,7 @@
+package visitas.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class ContinuacionEditHelper extends visitas.diagram.edit.helpers.VisitasBaseEditHelper {
+	}

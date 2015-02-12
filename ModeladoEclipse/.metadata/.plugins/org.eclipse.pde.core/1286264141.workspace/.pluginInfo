@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="1025" class="visitas.presentation.VisitasEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="Visitas.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1031" class="visitas.diagram.part.VisitasDiagramEditorPlugin" localization="plugin" name="%pluginName" project="presentacionTI" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1001" localization="plugin" name="%pluginName" project="Visitas" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1030" class="visitas.diagram.part.VisitasDiagramEditorPlugin" localization="plugin" name="%pluginName" project="Visitas.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1024" class="visitas.provider.VisitasEditPlugin$Implementation" localization="plugin" name="%pluginName" project="Visitas.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1026" localization="plugin" name="%pluginName" project="Visitas.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+</map>

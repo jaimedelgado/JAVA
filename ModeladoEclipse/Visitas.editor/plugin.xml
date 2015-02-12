@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="VisitasEditorAdvisorApplication">
+      <!-- @generated visitas -->
+      <application>
+         <run class="visitas.presentation.VisitasEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated visitas -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="visitas.presentation.VisitasEditorAdvisor$Perspective"
+            id="visitas.presentation.VisitasEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated visitas -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="visitas.presentation.VisitasEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="visitas.presentation.VisitasEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated visitas -->
+      <key
+            commandId="visitas.presentation.VisitasEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="visitas.presentation.VisitasEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated visitas -->
+      <actionSet
+            label="%_UI_VisitasEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="VisitasEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="visitas.presentation.VisitasEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="visitas.presentation.VisitasEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="visitas.presentation.VisitasEditorAdvisorOpenURICommand"
+               class="visitas.presentation.VisitasEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="visitas.presentation.VisitasEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="visitas.presentation.VisitasEditorAdvisorOpenCommand"
+               class="visitas.presentation.VisitasEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="visitas.presentation.VisitasEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated visitas -->
+      <actionSet
+            label="%_UI_VisitasModelWizard_ActionSet_label"
+            visible="true"
+            id="visitas.presentation.VisitasActionBarContributorActionSet">
+         <action
+               label="%_UI_VisitasModelWizard_label"
+               class="visitas.presentation.VisitasActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="visitas.presentation.VisitasActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated visitas -->
+      <editor
+            id="visitas.presentation.VisitasEditorID"
+            name="%_UI_VisitasEditor_label"
+            icon="icons/full/obj16/VisitasModelFile.gif"
+            extensions="visitas"
+            class="visitas.presentation.VisitasEditor"
+            contributorClass="visitas.presentation.VisitasActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

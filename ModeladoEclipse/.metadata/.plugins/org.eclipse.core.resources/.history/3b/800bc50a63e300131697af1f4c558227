@@ -1,0 +1,182 @@
+
+package visitas.diagram.part;
+
+/**
+ * @generated
+ */
+public class VisitasPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createVisitas1Group());
+	}
+
+	/**
+ * Creates "visitas" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createVisitas1Group() {
+				org.eclipse.gef.palette.PaletteGroup paletteContainer = new org.eclipse.gef.palette.PaletteGroup(visitas.diagram.part.Messages.Visitas1Group_title);
+				 paletteContainer.setId("createVisitas1Group"); //$NON-NLS-1$
+								paletteContainer.add(createEtapa1CreationTool());
+paletteContainer.add(createEtapaContinuacionesEtapa2CreationTool());
+paletteContainer.add(createEtapaRecursoEtapa3CreationTool());
+paletteContainer.add(createRecurso4CreationTool());
+paletteContainer.add(createContinuacion5CreationTool());
+paletteContainer.add(createContinuacionEtapaContinuacion6CreationTool());
+paletteContainer.add(createVisita7CreationTool());
+paletteContainer.add(createVisitaEtapasVisita8CreationTool());
+paletteContainer.add(createVisitaContinuacionesVisita9CreationTool());
+paletteContainer.add(createVisitaRecursosVisita10CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createEtapa1CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(visitas.diagram.part.Messages.Etapa1CreationTool_title, visitas.diagram.part.Messages.Etapa1CreationTool_desc, java.util.Collections.singletonList(visitas.diagram.providers.VisitasElementTypes.Continuacion_2001));
+				 entry.setId("createEtapa1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(visitas.diagram.providers.VisitasElementTypes.getImageDescriptor(visitas.diagram.providers.VisitasElementTypes.Continuacion_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createEtapaContinuacionesEtapa2CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(visitas.diagram.part.Messages.EtapaContinuacionesEtapa2CreationTool_title, visitas.diagram.part.Messages.EtapaContinuacionesEtapa2CreationTool_desc, java.util.Collections.singletonList(visitas.diagram.providers.VisitasElementTypes.Etapa_2002));
+				 entry.setId("createEtapaContinuacionesEtapa2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(visitas.diagram.providers.VisitasElementTypes.getImageDescriptor(visitas.diagram.providers.VisitasElementTypes.Etapa_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createEtapaRecursoEtapa3CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(visitas.diagram.part.Messages.EtapaRecursoEtapa3CreationTool_title, visitas.diagram.part.Messages.EtapaRecursoEtapa3CreationTool_desc, java.util.Collections.singletonList(visitas.diagram.providers.VisitasElementTypes.Recurso_2003));
+				 entry.setId("createEtapaRecursoEtapa3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(visitas.diagram.providers.VisitasElementTypes.getImageDescriptor(visitas.diagram.providers.VisitasElementTypes.Recurso_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createRecurso4CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(visitas.diagram.part.Messages.Recurso4CreationTool_title, visitas.diagram.part.Messages.Recurso4CreationTool_desc, null, null) {};
+				 entry.setId("createRecurso4CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createContinuacion5CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(visitas.diagram.part.Messages.Continuacion5CreationTool_title, visitas.diagram.part.Messages.Continuacion5CreationTool_desc, null, null) {};
+				 entry.setId("createContinuacion5CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createContinuacionEtapaContinuacion6CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(visitas.diagram.part.Messages.ContinuacionEtapaContinuacion6CreationTool_title, visitas.diagram.part.Messages.ContinuacionEtapaContinuacion6CreationTool_desc, java.util.Collections.singletonList(visitas.diagram.providers.VisitasElementTypes.ContinuacionEtapaContinuacion_4001));
+				 entry.setId("createContinuacionEtapaContinuacion6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(visitas.diagram.providers.VisitasElementTypes.getImageDescriptor(visitas.diagram.providers.VisitasElementTypes.ContinuacionEtapaContinuacion_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createVisita7CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(visitas.diagram.part.Messages.Visita7CreationTool_title, visitas.diagram.part.Messages.Visita7CreationTool_desc, null, null) {};
+				 entry.setId("createVisita7CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createVisitaEtapasVisita8CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(visitas.diagram.part.Messages.VisitaEtapasVisita8CreationTool_title, visitas.diagram.part.Messages.VisitaEtapasVisita8CreationTool_desc, null, null) {};
+				 entry.setId("createVisitaEtapasVisita8CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createVisitaContinuacionesVisita9CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(visitas.diagram.part.Messages.VisitaContinuacionesVisita9CreationTool_title, visitas.diagram.part.Messages.VisitaContinuacionesVisita9CreationTool_desc, null, null) {};
+				 entry.setId("createVisitaContinuacionesVisita9CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createVisitaRecursosVisita10CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(visitas.diagram.part.Messages.VisitaRecursosVisita10CreationTool_title, visitas.diagram.part.Messages.VisitaRecursosVisita10CreationTool_desc, null, null) {};
+				 entry.setId("createVisitaRecursosVisita10CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+
+
+
+	/**
+ * @generated
+ */
+	private static class NodeToolEntry extends org.eclipse.gef.palette.ToolEntry {
+
+		/**
+ * @generated
+ */
+		private final java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes;
+
+		/**
+ * @generated
+ */
+		private NodeToolEntry(String title, String description, java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes) {
+			super(title, description, null, null);
+			this.elementTypes = elementTypes;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.Tool createTool() {
+			org.eclipse.gef.Tool tool = new org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool(elementTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+
+	/**
+ * @generated
+ */
+	private static class LinkToolEntry extends org.eclipse.gef.palette.ToolEntry {
+
+		/**
+ * @generated
+ */
+		private final java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> relationshipTypes;
+
+		/**
+ * @generated
+ */
+		private LinkToolEntry(String title, String description, java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> relationshipTypes) {
+			super(title, description, null, null);
+			this.relationshipTypes = relationshipTypes;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.Tool createTool() {
+			org.eclipse.gef.Tool tool = new org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool(relationshipTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+}

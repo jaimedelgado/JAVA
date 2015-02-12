@@ -1,0 +1,25 @@
+package visitas.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ElementInitializers {
+
+	protected ElementInitializers() {
+		// use #getInstance to access cached instance
+	} 
+
+			
+	
+	
+	/**
+ * @generated
+ */
+	public static ElementInitializers getInstance() {
+		ElementInitializers cached = visitas.diagram.part.VisitasDiagramEditorPlugin.getInstance().getElementInitializers();
+		if (cached == null) {
+			visitas.diagram.part.VisitasDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
+		}
+		return cached;
+	}
+}

@@ -1,0 +1,14 @@
+package visitas.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramAppearancePreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.AppearancePreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramAppearancePreferencePage() {
+		setPreferenceStore(visitas.diagram.part.VisitasDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

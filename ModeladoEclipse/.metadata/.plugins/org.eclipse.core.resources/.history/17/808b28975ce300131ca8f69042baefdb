@@ -1,0 +1,40 @@
+package visitas.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class VisitaEditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart  {
+
+		/**
+ * @generated
+ */
+	public final static String MODEL_ID = "Visitas";  //$NON-NLS-1$
+	
+		/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 1000;
+	
+		/**
+ * @generated
+ */
+	public VisitaEditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+			super.createDefaultEditPolicies();
+		installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new visitas.diagram.edit.policies.VisitaItemSemanticEditPolicy());
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CANONICAL_ROLE, new visitas.diagram.edit.policies.VisitaCanonicalEditPolicy());
+		installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CREATION_ROLE, new org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent(visitas.diagram.part.VisitasVisualIDRegistry.TYPED_INSTANCE));
+					// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.POPUPBAR_ROLE);
+	}
+	
+		
+	
+
+
+	}

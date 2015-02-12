@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visitas:Visita xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:visitas="http://visitas/1.0">
+  <etapasVisita htmlEtapa="index.html" recursoEtapa="//@recursosVisita.0" continuacionEtapa="//@continuacionesVisita.0 //@continuacionesVisita.1 //@continuacionesVisita.2 //@continuacionesVisita.3"/>
+  <etapasVisita htmlEtapa="walleSouth.html" recursoEtapa="//@recursosVisita.1" continuacionEtapa="//@continuacionesVisita.0 //@continuacionesVisita.1 //@continuacionesVisita.2 //@continuacionesVisita.3"/>
+  <etapasVisita htmlEtapa="walleEast.html" recursoEtapa="//@recursosVisita.2" continuacionEtapa="//@continuacionesVisita.0 //@continuacionesVisita.1 //@continuacionesVisita.2 //@continuacionesVisita.3"/>
+  <etapasVisita htmlEtapa="walleWest.html" recursoEtapa="//@recursosVisita.3" continuacionEtapa="//@continuacionesVisita.0 //@continuacionesVisita.1 //@continuacionesVisita.2 //@continuacionesVisita.3"/>
+  <continuacionesVisita textoContinuacion="North" etapaContinuacion="//@etapasVisita.0"/>
+  <continuacionesVisita textoContinuacion="South" etapaContinuacion="//@etapasVisita.1"/>
+  <continuacionesVisita textoContinuacion="East" etapaContinuacion="//@etapasVisita.2"/>
+  <continuacionesVisita textoContinuacion="West" etapaContinuacion="//@etapasVisita.3"/>
+  <recursosVisita htmlRecurso="RWalleNorth.html" imagenRecurso="walleNorth.png" descripcionRecurso="Walle North"/>
+  <recursosVisita htmlRecurso="RWalleSouth.html" imagenRecurso="walleSouth.png" descripcionRecurso="Walle South"/>
+  <recursosVisita htmlRecurso="RWalleEast.html" imagenRecurso="walleEast.png" descripcionRecurso="Walle East"/>
+  <recursosVisita htmlRecurso="RWalleWest.html" imagenRecurso="walleWest.png" descripcionRecurso="Walle West"/>
+</visitas:Visita>

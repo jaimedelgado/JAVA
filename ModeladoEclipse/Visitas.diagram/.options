@@ -1,0 +1,7 @@
+# Tracing options for the Visitas.diagram plug-in
+
+# Common issues
+Visitas.diagram/debug=false
+
+# Visual IDs
+Visitas.diagram/debug/visualID=false

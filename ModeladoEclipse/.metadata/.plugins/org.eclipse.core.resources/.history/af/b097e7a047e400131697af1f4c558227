@@ -1,0 +1,65 @@
+package visitas.diagram.part;
+
+/**
+ * @generated
+ */
+public class VisitasCreationWizardPage extends
+			visitas.diagram.application.WizardNewFileCreationPage
+			{
+
+	/**
+ * @generated
+ */
+	private final String fileExtension;
+
+	/**
+ * @generated
+ */
+	public VisitasCreationWizardPage(String pageName,
+			org.eclipse.jface.viewers.IStructuredSelection selection, String fileExtension) {
+		super(pageName, selection);
+		this.fileExtension = fileExtension;
+	}
+
+	/**
+	 * Override to create files with this extension.
+	 * 
+	 * @generated
+	 */
+	protected String getExtension() {
+		return fileExtension;
+	}
+
+	/**
+ * @generated
+ */
+	public org.eclipse.emf.common.util.URI getURI() {
+			return org.eclipse.emf.common.util.URI.createFileURI(getFilePath().toString());
+		}
+	
+	/**
+ * @generated
+ */
+	public void createControl(org.eclipse.swt.widgets.Composite parent) {
+		super.createControl(parent);
+		setFileName(visitas.diagram.part.VisitasDiagramEditorUtil.getUniqueFileName(
+				getContainerFullPath(), getFileName(), getExtension()));
+		setPageComplete(validatePage());
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean validatePage() {
+		if (!super.validatePage()) {
+			return false;
+		}
+		String extension = getExtension();
+		if (extension != null && !getFilePath().toString().endsWith("." + extension)) {
+			setErrorMessage(org.eclipse.osgi.util.NLS.bind(
+					visitas.diagram.part.Messages.VisitasCreationWizardPageExtensionError, extension));
+			return false;
+		}
+		return true;
+	}
+	}

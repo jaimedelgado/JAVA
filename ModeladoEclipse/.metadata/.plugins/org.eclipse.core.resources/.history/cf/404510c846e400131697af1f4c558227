@@ -1,0 +1,190 @@
+package visitas.diagram.providers;
+
+/**
+ * @generated
+ */
+public class VisitasElementTypes {
+
+		/**
+ * @generated
+ */
+private VisitasElementTypes() {
+}
+	
+		/**
+ * @generated
+ */
+private static java.util.Map<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement> elements;
+
+	/**
+ * @generated
+ */
+private static org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages elementTypeImages = new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages(	visitas.diagram.part.VisitasDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
+
+	/**
+ * @generated
+ */
+private static java.util.Set<org.eclipse.gmf.runtime.emf.type.core.IElementType> KNOWN_ELEMENT_TYPES;
+	
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Visita_1000 = getElementType("Visitas.diagram.Visita_1000");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Recurso_2001 = getElementType("Visitas.diagram.Recurso_2001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Etapa_2002 = getElementType("Visitas.diagram.Etapa_2002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Continuacion_2003 = getElementType("Visitas.diagram.Continuacion_2003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ContinuacionEtapaContinuacion_4001 = getElementType("Visitas.diagram.ContinuacionEtapaContinuacion_4001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType EtapaContinuacionEtapa_4002 = getElementType("Visitas.diagram.EtapaContinuacionEtapa_4002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType EtapaRecursoEtapa_4003 = getElementType("Visitas.diagram.EtapaRecursoEtapa_4003");  //$NON-NLS-1$
+		
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImageDescriptor(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImage(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImageDescriptor(getElement(hint));
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImage(getElement(hint));
+}
+
+		/**
+ * Returns 'type' of the ecore object associated with the hint.
+ * 
+ * @generated
+ */
+public static org.eclipse.emf.ecore.ENamedElement getElement(org.eclipse.core.runtime.IAdaptable hint) {
+	Object type = hint.getAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType.class);
+	if (elements == null) {
+		elements = new java.util.IdentityHashMap<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement>();
+		
+	elements.put(Visita_1000, visitas.VisitasPackage.eINSTANCE.getVisita());
+					
+	
+	elements.put(Recurso_2001, visitas.VisitasPackage.eINSTANCE.getRecurso());
+					
+	
+	elements.put(Etapa_2002, visitas.VisitasPackage.eINSTANCE.getEtapa());
+					
+	
+	elements.put(Continuacion_2003, visitas.VisitasPackage.eINSTANCE.getContinuacion());
+							
+	elements.put(ContinuacionEtapaContinuacion_4001, visitas.VisitasPackage.eINSTANCE.getContinuacion_EtapaContinuacion());
+					
+	elements.put(EtapaContinuacionEtapa_4002, visitas.VisitasPackage.eINSTANCE.getEtapa_ContinuacionEtapa());
+					
+	elements.put(EtapaRecursoEtapa_4003, visitas.VisitasPackage.eINSTANCE.getEtapa_RecursoEtapa());
+			}
+	return (org.eclipse.emf.ecore.ENamedElement) elements.get(type);
+}
+
+		/**
+ * @generated
+ */
+private static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(String id) {
+	return org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry.getInstance().getType(id);
+}
+
+		/**
+ * @generated
+ */
+public static boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	if (KNOWN_ELEMENT_TYPES == null) {
+		KNOWN_ELEMENT_TYPES = new java.util.HashSet<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+			KNOWN_ELEMENT_TYPES.add(Visita_1000);
+		KNOWN_ELEMENT_TYPES.add(Recurso_2001);
+		KNOWN_ELEMENT_TYPES.add(Etapa_2002);
+		KNOWN_ELEMENT_TYPES.add(Continuacion_2003);
+		KNOWN_ELEMENT_TYPES.add(ContinuacionEtapaContinuacion_4001);
+		KNOWN_ELEMENT_TYPES.add(EtapaContinuacionEtapa_4002);
+		KNOWN_ELEMENT_TYPES.add(EtapaRecursoEtapa_4003);
+		}
+	return KNOWN_ELEMENT_TYPES.contains(elementType);
+}
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(int visualID) {
+		switch (visualID) {
+				case visitas.diagram.edit.parts.VisitaEditPart.VISUAL_ID:		return Visita_1000;
+	case visitas.diagram.edit.parts.RecursoEditPart.VISUAL_ID:		return Recurso_2001;
+	case visitas.diagram.edit.parts.EtapaEditPart.VISUAL_ID:		return Etapa_2002;
+	case visitas.diagram.edit.parts.ContinuacionEditPart.VISUAL_ID:		return Continuacion_2003;
+	case visitas.diagram.edit.parts.ContinuacionEtapaContinuacionEditPart.VISUAL_ID:		return ContinuacionEtapaContinuacion_4001;
+	case visitas.diagram.edit.parts.EtapaContinuacionEtapaEditPart.VISUAL_ID:		return EtapaContinuacionEtapa_4002;
+	case visitas.diagram.edit.parts.EtapaRecursoEtapaEditPart.VISUAL_ID:		return EtapaRecursoEtapa_4003;
+		}
+		return null;
+	}
+	
+		/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes TYPED_INSTANCE 
+		= new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes(elementTypeImages) {
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+			return visitas.diagram.providers.VisitasElementTypes.isKnownElementType(elementType);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.gmf.runtime.emf.type.core.IElementType getElementTypeForVisualId(int visualID) {
+			return visitas.diagram.providers.VisitasElementTypes.getElementType(visualID);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.emf.ecore.ENamedElement getDefiningNamedElement(org.eclipse.core.runtime.IAdaptable elementTypeAdapter) {
+			return visitas.diagram.providers.VisitasElementTypes.getElement(elementTypeAdapter);
+		}
+	}; 
+
+	}

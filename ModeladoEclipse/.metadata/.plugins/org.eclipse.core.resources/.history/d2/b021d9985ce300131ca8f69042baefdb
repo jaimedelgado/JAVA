@@ -1,0 +1,31 @@
+package visitas.diagram.application;
+
+/**
+ * @generated
+ */
+public class VisitasApplication implements org.eclipse.equinox.app.IApplication {
+
+
+	/**
+ * @generated
+ */
+	public Object start(org.eclipse.equinox.app.IApplicationContext context) throws Exception {
+		org.eclipse.swt.widgets.Display display = org.eclipse.ui.PlatformUI.createDisplay();
+		try {
+			int returnCode = org.eclipse.ui.PlatformUI.createAndRunWorkbench(display,
+				new visitas.diagram.application.DiagramEditorWorkbenchAdvisor());
+			if (returnCode == org.eclipse.ui.PlatformUI.RETURN_RESTART) {
+				return org.eclipse.equinox.app.IApplication.EXIT_RESTART;
+			}
+			return org.eclipse.equinox.app.IApplication.EXIT_OK;
+		} finally {
+			display.dispose();
+		}
+	}
+
+	/**
+ * @generated
+ */
+	public void stop() {
+	}
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visitas:Visita xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:visitas="http://visitas/1.0">
+  <etapasVisita htmlEtapa="etapa1" recursoEtapa="//@recursosVisita.0" continuacionEtapa="//@continuacionesVisita.0 //@continuacionesVisita.1"/>
+  <etapasVisita htmlEtapa="salir.html" recursoEtapa="//@recursosVisita.1"/>
+  <continuacionesVisita textoContinuacion="volver" etapaContinuacion="//@etapasVisita.0"/>
+  <continuacionesVisita textoContinuacion="salir" etapaContinuacion="//@etapasVisita.1"/>
+  <recursosVisita htmlRecurso="etapa1.html" imagenRecurso="imgEtapa1" descripcionRecurso="dscEtapa1"/>
+  <recursosVisita htmlRecurso="salir.html" imagenRecurso="imgSalir" descripcionRecurso="dscSalir"/>
+</visitas:Visita>

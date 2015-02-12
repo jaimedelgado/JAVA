@@ -1,0 +1,60 @@
+package visitas.diagram.part;
+
+/**
+ * @generated
+ */
+public class VisitasInitDiagramFileAction
+	implements org.eclipse.ui.IWorkbenchWindowActionDelegate {
+
+	/**
+ * @generated
+ */
+	private org.eclipse.ui.IWorkbenchWindow window;
+
+	/**
+ * @generated
+ */
+	public void init(org.eclipse.ui.IWorkbenchWindow window) {
+		this.window = window;
+	}
+
+	/**
+ * @generated
+ */
+	public void dispose() {
+		window = null;
+	}
+
+	/**
+ * @generated
+ */
+	public void selectionChanged(org.eclipse.jface.action.IAction action, org.eclipse.jface.viewers.ISelection selection) {
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.swt.widgets.Shell getShell() {
+		return window.getShell();
+	}
+
+	/**
+ * @generated
+ */
+	public void run(org.eclipse.jface.action.IAction action) {
+		org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain =
+			org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory.INSTANCE.createEditingDomain();
+		org.eclipse.emf.ecore.resource.Resource resource =
+				visitas.diagram.part.VisitasDiagramEditorUtil.openModel(getShell(), 
+					visitas.diagram.part.Messages.InitDiagramFile_OpenModelFileDialogTitle, editingDomain);
+		if (resource == null || resource.getContents().isEmpty()) {
+			return;
+		}
+		org.eclipse.emf.ecore.EObject diagramRoot = (org.eclipse.emf.ecore.EObject) resource.getContents().get(0);
+		org.eclipse.jface.wizard.Wizard wizard = new visitas.diagram.part.VisitasNewDiagramFileWizard(resource.getURI(), diagramRoot, editingDomain);
+		wizard.setWindowTitle(org.eclipse.osgi.util.NLS.bind(
+				    visitas.diagram.part.Messages.InitDiagramFile_WizardTitle,
+				    visitas.diagram.edit.parts.VisitaEditPart.MODEL_ID));
+		visitas.diagram.part.VisitasDiagramEditorUtil.runWizard(getShell(), wizard, "InitDiagramFile"); //$NON-NLS-1$
+	}
+	}
